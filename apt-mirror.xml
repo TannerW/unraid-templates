@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>apt-mirror-testing</Name>
+  <Repository>tannerwilk/apt-mirror_for_unraid</Repository>
+  <Registry>https://hub.docker.com/r/tannerwilk/apt-mirror_for_unraid</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category>Backup: Downloaders: Tools: Network:Other Status:Beta</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1623332251</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8111</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/apt-mirror/www/</HostDir>
+      <ContainerDir>/var/www/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Apache" Target="80" Default="8111" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8111</Config>
+  <Config Name="Data" Target="/var/www/" Default="/mnt/user/apt-mirror/www/" Mode="rw" Description="Container Path: /var/www/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/apt-mirror/www/</Config>
+</Container>
